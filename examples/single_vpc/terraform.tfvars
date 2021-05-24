@@ -147,21 +147,24 @@ interfaces = [
 ]
 
 
-firewalls = [{
-  name    = "vmseries01"
-  fw_tags = { "foo" = "bar" }
-  interfaces = [{ # Only assign default interface here to avoid instance recreation when later updating interfaces
-    name  = "vmseries01-mgmt"
-    index = "0"
-  }]
+firewalls = [
+  {
+    name    = "vmseries01"
+    fw_tags = { "foo" = "luca" }
+    interfaces = [{ # Only assign default interface here to avoid instance recreation when later updating interfaces
+      name  = "vmseries01-mgmt"
+      index = "0"
+    }]
+    bootstrap_options = {}
   },
   {
     name    = "vmseries02"
-    fw_tags = { "foo" = "bar" }
+    fw_tags = { "foo" = "luca" }
     interfaces = [{ # Only assign default interface here to avoid instance recreation when later updating interfaces
       name  = "vmseries02-mgmt"
       index = "0"
     }]
+    bootstrap_options = {}
   }
 ]
 
