@@ -1,0 +1,14 @@
+region          = "us-east-1"
+prefix_name_tag = "example-vpce-"
+
+global_tags = {
+  ManagedBy   = "terraform"
+  Application = "Palo Alto Networks VM-Series Combined"
+  Owner       = "PS team"
+  Creator     = "login"
+}
+
+
+security_vpc_name = "security-vpc"
+security_vpc_cidr = "10.100.0.0/16"
+
