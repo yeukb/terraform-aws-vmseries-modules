@@ -1,7 +1,7 @@
 module "vpc" {
   source = "../../modules/vpc"
 
-  name                    = "${var.prefix_name_tag}vpc"
+  name                    = var.security_vpc_name
   cidr_block              = "10.100.0.0/16"
   create_internet_gateway = false
   global_tags             = var.global_tags
@@ -31,7 +31,7 @@ module "vpc" {
 module "subnet_set_mgmt" {
   source = "../../modules/subnet_set"
 
-  name                = "${var.prefix_name_tag}mgmt"
+  name                = "${var.security_vpc_name}mgmt"
   vpc_id              = module.vpc.id
   has_secondary_cidrs = module.vpc.has_secondary_cidrs
   global_tags         = var.global_tags

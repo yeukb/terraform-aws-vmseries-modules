@@ -1,5 +1,4 @@
-region          = "us-east-1"
-prefix_name_tag = "example-vpce-"
+region = "us-east-1"
 
 global_tags = {
   ManagedBy   = "terraform"
